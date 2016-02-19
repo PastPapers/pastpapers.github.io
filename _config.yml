@@ -1,0 +1,7 @@
+# General stuff
+name: PastPapers
+url: http://pastpapers.lexteam.xyz
+
+# Extra plugins
+gems:
+  - jekyll-sitemap
