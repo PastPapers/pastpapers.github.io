@@ -4,7 +4,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
-    <title>{{ site.name }}</title>
+    <title>{% if page.title %}{{ page.title }} - {% endif %}{{ site.name }}</title>
 
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css" />
 </head>
@@ -27,11 +27,29 @@
 
 {{ content}}
 
-<footer class="page-footer orange">
+<footer class="page-footer">
+    <div class="container">
+        <div class="row">
+            <div class="col l6 s12">
+                <h5 class="white-text">PastPapers</h5>
+                <p class="grey-text text-lighten-4">Fires exam questions at you from past papers.</p>
+            </div>
+            <div class="col l4 offset-l2 s12">
+                <h5 class="white-text">Links</h5>
+                <ul>
+                    <li><a class="grey-text text-lighten-3" href="/">Homepage</a></li>
+                    <li><a class="grey-text text-lighten-3" href="/downloads">Downloads</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/PastPapers">Source Code</a></li>
+                    <li><a class="grey-text text-lighten-3" href="https://github.com/PastPapers/PastPapers/issues">Issue Tracker</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
     <div class="footer-copyright">
         <div class="container">
+            Copyright &copy; 2016, <a href="https://www.lexteam.xyz/">Lexteam</a>.
             <a href="https://www.lexteam.xyz/">
-                <img src="/assets/img/lexteam_logo.png" alt="Lexteam Logo" height="50" />
+                <img class="right" src="/assets/img/lexteam_logo.png" alt="Lexteam Logo" height="50" />
             </a>
         </div>
     </div>
